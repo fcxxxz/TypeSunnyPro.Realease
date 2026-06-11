@@ -1,1 +1,146 @@
-IyDmmbTot5/miZNQcm8g5L2/55So5omL5YaMCgoqKlvmmbTot5/miZNQcm9dKiot5q+U5pm06Lef5omT5pu05aW955So55qE5YWo5bmz5Y+w6Lef5omT5Zmo77yM5pSv5oyBbWFj77yMd2lu77yMd2Vi572R6aG177yMKiroh6rluKbotoXpq5jmgKfog73lj5HmloflkozotZvmlofvvIzlhajlip/og73lhY3otLkqKgoKVUnlpKfph43mnoTvvIHmlK/mjIFtYWPmtrLmgIHnjrvnkoPvvIx3aW7kupHmr43kuprlhYvlipsKCuWGhee9ruWPjOaLvOe7g+S5oOW3peWFt++8jOWfuuS6jlvlvIDmupDlj4zmi7znu4PkuaDlt6XlhbddKGh0dHBzOi8vZ2l0aHViLmNvbS9CbHVlU2t5LTA3L1NodWFuZynmt7HluqbkvJjljJbvvIHliqDlhaXmmbrog73mjqjpgIHnrpfms5XvvIzlj4zmi7znu4PkuaDmm7Tpq5jmlYjvvIEKCuWPr+i/nlHnvqTlj5Hmlofovb3mlofvvIzplJnlrZfmhaLlrZfph43miZPvvIzotqPlkbPotKrlkIPom4fmqKHlvI/vvIzlr7nnhafmqKHlvI/vvIzlrZfluJbmqKHlvI/vvIzkuLTmkbnmqKHlvI/vvIzotoXlpb3nlKh+CgoqKlvmmbTlj5HmloddKiot5LiA5aWX5oCn6IO95by65aSn55qE5Y+R5paHK+i1m+aWh+ezu+e7n++8jOaWh+W6k+S4reWMheWQqzHkuIflpJrmnKzkuabnsY3vvIwx5Lq/K+auteavj+autTIwMOWtl+W3puWPs+eahOaWh+aute+8jOaUr+aMgeWujOWFqOmaj+acuu+8jOS4iuS4i+e/u+mhte+8jOmAieS4reS5puexjeWumuWQkeWPkeaWh+etieWKn+iDvQoKW+aZtOWPkeaWh10oaHR0cHM6Ly9naXRodWIuY29tL2E4MTA0MzkzMjIvcHJlYWNoU3VubnkpIOWwmuacquW8gOa6kO+8jOS9huS7jeWFqOWKn+iDveW8gOaUvuW5tuWFjei0ueS9v+eUqO+8jOS5n+asoui/juWFtuS7luWPkeaWh+W3peWFt+aOpeWFpeWPkeaWh+ezu+e7n++8jOWUr+S4gOimgeaxgu+8muWPkeaWh+acq+Wwvue9suWQjS3mmbTlj5HmlocKClvmmbTot5/miZNQcm9d5Z+65LqOW+aZtOi3n+aJk10oaHR0cHM6Ly9naXRodWIuY29tL2ZjeHh4ei9UeXBlU3Vubnkp5rex5bqm5LyY5YyW5ZKM6YeN5p6E77yM5Zyo5q2k6Ie05pWs5oiR6Ieq5bex77yM55yf5piv6L6b6Ium5oiR5LqGCgojIyDnm67lvZUKCjEuIFvova/ku7bnroDku4tdKCPova/ku7bnroDku4spCjIuIFvlv6vpgJ/lvIDlp4tdKCPlv6vpgJ/lvIDlp4spCjMuIFvluLjnlKjlv6vmjbfplK5dKCPluLjnlKjlv6vmjbfplK4pCjcuIFvotZvmloddKCPotZvmlocpCjguIFvnu4PljZXlmahdKCPnu4PljZXlmagpCjkuIFvluLjop4Hpl67pophdKCPluLjop4Hpl67popgpCgotLS0KCiMjIFFR5pSv5oyB6K+05piOCgrmlK/mjIHnmoRRUeeJiOacrOS4ujkuOS4yMi40MDk5MCjkuI3ljIXlkKsp5LmL5ZCO55qE54mI5pys77yM55uu5YmNMjAyNi4wNS4wOOeJiOacrOS4uiA5LjkuMjktNDczNTTvvIzkuYvlkI7niYjmnKzlsIbplb/mnJ/mlK/mjIF+CiMg5a2X5biW5qih5byPIOS9k+mqjOi2heajku+8gQohW+Wtl+W4luaooeW8jy5wbmddKGludHJvaW1hZ2VzL3ppdGllLnBuZykKIyDkuIDplK7mnoHnroDvvIHlkK/liqjvvIF+CiFb5LiA6ZSu5p6B566ALnBuZ10oaW50cm9pbWFnZXMvamlqaWFuLnBuZykKIyDotoXlpJrkuLvpopgKIVvotoXlpJrkuLvpopgucG5nXShpbnRyb2ltYWdlcy96aHV0aS5wbmcpCiMg6YCa6YCP5qih5byP77yBCiFb6YCa6YCP5qih5byPLnBuZ10oaW50cm9pbWFnZXMvdG9uZ3RvdS5wbmcpCiMg6YCa6YCPK+S4gOmUruaegeeugO+8gQohW+mAmumAjyvkuIDplK7mnoHnroAucG5nXShpbnRyb2ltYWdlcy90b25ndG91amlqaWFuLnBuZykKIyDkuabmnrbvvIEKIVvkuabmnrYucG5nXShpbnRyb2ltYWdlcy9zaHVqaWEucG5nKQoKLS0tCgojIyDlv6vpgJ/lvIDlp4sKCiMjIyDkuIvovb3or7TmmI4KCnwg5paH5Lu2IHwg6YCC5ZCI55So5oi3IHwg6K+05piOIHwKfCAtLS0gfCAtLS0gfCAtLS0gfAp8IGBUeXBlU3VubnlQcm8t54mI5pys5Y+3LXVwZGF0ZS56aXBgIHwgV2luZG93cyDnlKjmiLcgfCBXaW5kb3dzIOi9u+mHj+WMheWSjOW6lOeUqOWGheabtOaWsOWMhe+8jOmcgOimgeWFiOWuieijhSAuTkVUIDEwIERlc2t0b3AgUnVudGltZeOAgiB8CnwgYFR5cGVTdW5ueVByby3niYjmnKzlj7ctbWFjb3MtYXJtNjQuZG1nYCB8IE1hYyDnlKjmiLcgfCBNYWMg55So5oi36K+35LiL6L296L+Z5Liq44CC5omT5byAIERNRyDlkI7lhYjnnIsgYDEt5a6J6KOF5q2l6aqkLeWFiOivu+aIkS50eHRg77ya5oqKIGDmmbTot5/miZNQcm8uYXBwYCDmi5bliLDigJzlupTnlKjnqIvluo/igJ3vvIzlho3ov5DooYwgYDIt6aaW5qyh5omT5LiN5byA5pe26L+Q6KGMLmNvbW1hbmRg77yb6KKr57O757uf5oum5oiq5pe25YiwIOezu+e7n+iuvue9riA+IOmakOengeS4juWuieWFqOaApyDngrnigJzku43opoHmiZPlvIDigJ3jgIIgfAp8IGBUeXBlU3VubnlQcm8t54mI5pys5Y+3LW1hY29zLWFybTY0LnppcGAgfCDlupTnlKjlhoXmm7TmlrAgfCDnu5kgbWFjT1Mg5bqU55So5YaF5pu05paw5L2/55So77yM5pmu6YCa55So5oi35LiN6KaB5LyY5YWI5LiL6L2944CCIHwKfCBgKi1wYWNrYWdlLmpzb25gIHwg56iL5bqP5pu05paw5ZmoIHwg5pu05paw5Zmo6K+75Y+W55qE5YyF5riF5Y2V77yM5pmu6YCa55So5oi35LiN55So5LiL6L2944CCIHwKCiMjIyDnrKzkuIDmrKHkvb/nlKgKCjEuICoq6L+Q6KGMKirvvJrlj4zlh7sgYOaZtOi3n+aJk1Byby5leGVgIOWQr+WKqOeoi+W6jwoKMi4gKirmlofmnaXvvIEqKu+8mgogICAgLSDmlofmnaXmjInpkq7ngrnlh7vlt6bplK7miJZDdHJsK1LvvIzlj6/nm7TmjqXlj5HmlocKICAgIC0g6K+35qC55o2u5o+Q56S65rOo5YaM55m75b2V77yM5biQ5Y+35ZCM5pi156ew77yM5peg5rOo5YaM6ZmQ5Yi277yM5Y+v5L2/55So5Lit5paH77yM5a+G56CB5Yqg5a+G5a2Y5YKo77yM5L2c6ICF5Lmf55yL5LiN5Yiw77yM6K+36Ieq5bex5L+d5a2Y5aW95biQ5Y+35a+G56CBKOWQjuacn+S8muWKoOmCruS7tumHjee9ruWvhueggeWSjOaUueWvhuWKn+iDvSkKICAgICAgICAtIOiuvue9rumhtemdouWPr+iuvue9ruaWh+adpeWtl+aVsO+8jOaWh+adpemavuW6pu+8jOaWh+adpeacjeWKoeWZqOWcsOWdgAogICAgICAgICAgICAtIEN0cmwrUOS4i+e/u+mhte+8jEN0cmwrTyjmmK/lrZfmr41P5LiN5piv5pWw5a2XMCnkuIrnv7vpobXvvIznnIvliLDmhJ/lhbTotqPnmoTmloflj6/ku6Xnu6fnu63lvoDkuIvnnIt+5Lmf5Y+v5Lul6K6+572u6aG65bqP5Y+R5paH5oiW6ZqP5py65Y+R5paHCiAgICAtIOaWh+adpeaMiemSrueCueWHu+WPs+mUru+8jOWPr+mAgOWHuueZu+W9leOAgeWIh+aNouacjeWKoeWZqOWcsOWdgAogICAgICAgIC0g5YWB6K645Yqg5YWl5Lu75L2V6Ieq5bu65Y+R5paH5pyN5Yqh77yM6buY6K6k5Y+R5paH5o6l5Y+j5Zyw5Z2A77yaaHR0cHM6Ly90eXBpbmcuZmN4eHouY29tLwogICAgICAgIC0g6Ieq5bu65pa55rOV77ya5pys5Zyw5oiW5pyN5Yqh5Zmo6YOo572y5pm05Y+R5paH57O757uf77yM5aaC6ZyA6Ieq5bu677yM5Y+v55u05o6l6Zeu5L2c6ICF6KaBZG9ja2Vy6ZWc5YOP77yM5aaC6ZyA55So5Zyo5aSW6YOo5Y+R5paH77yM6K+36YG15a6I5ZCb5a2Q5Y2P5a6a77ya5Y+R5paH5pyr5bC+572y5ZCNLeaZtOWPkeaWhwoKMy4gKirmnKzlnLDkuabnsY3ot5/miZMqKu+8mgogICAgLSDlsIYgdHh0IOaWh+S7tuaUvuWFpei9r+S7tuebruW9leeahCBg5paH56ugYCDmlofku7blpLkKICAgIC0g54K55Ye76aaW6aG15paH56ug566h55CG5oiWQ3RybCtC77yM5pa55ZCR5LiK5LiL5bem5Y+z6YO95pyJ5Yqf6IO977yM5Zue6L2m5Y2z5Y+v5Y+R5paHCgozLiAqKui1m+aWhyoq77yaCiAgICAtIOiHquWumuS5iei1m+aWh+acjeWKoeWZqAogICAgICAgIC0g5YWB6K645Yqg5YWl5Lu75L2V6Ieq5bu66LWb5paH5pyN5Yqh77yM6buY6K6k6LWb5paH5o6l5Y+j5Zyw5Z2A77yaaHR0cHM6Ly90eXBpbmcuZmN4eHouY29tLwogICAgICAgIC0g6Ieq5bu65pa55rOV77ya5pys5Zyw5oiW5pyN5Yqh5Zmo6YOo572y5pm05Y+R5paH57O757uf77yM5aaC6ZyA6Ieq5bu677yM5Y+v55u05o6l6Zeu5L2c6ICF6KaBZG9ja2Vy6ZWc5YOP77yM5aaC6ZyA55So5Zyo5aSW6YOo5Y+R5paH77yM6K+36YG15a6I5ZCb5a2Q5Y2P5a6a77ya5Y+R5paH5pyr5bC+572y5ZCNLeaZtOWPkeaWhwogICAgLSDlhbbku5botZvmlofvvJrlt7LmjqXlhaXplKbmoIfotZvvvIzmnoHpgJ/mna/vvIzlpoLpnIDmjqXlhaXlhbbku5botZvmlofvvIzlj6/ogZTns7vkvZzogIXmjqXlhaUKCi0tLQoKIyMg5bi455So5b+r5o236ZSuCgp8IOW/q+aNt+mUriAgICAgIHwg5Yqf6IO9ICAgICAgIHwKfC0tLS0tLS0tLS18LS0tLS0tLS0tLXwKfCBGMyAgICAgICB8IOmHjeaWsOaJk+W9k+WJjeaWh+eroCAgfAp8IEY0ICAgICAgIHwg5LuOUVHnvqTliqDovb3mlofnq6AgfAp8IEY1ICAgICAgIHwg6YCJUVHnvqQgICAgIHwKfCBDVFJMICsgRSB8IOWJquWIh+adv+i9veaWhyAgICB8CnwgQ3RybCArIFIgfCDmlofmnaUgICAgICAgfAp8IEN0cmwgKyBQIHwg5LiL5LiA5q61ICAgICAgfAp8IEN0cmwgKyBPIHwg5LiK5LiA5q61ICAgICAgfAp8IEN0cmwgKyBMIHwg5Lmx5bqP6YeN5omTICAgICB8CgojIyMg6LSq5ZCD6JuH5qih5byPCgotIOWPquaYvuekuuW9k+WJjeS9jee9ruWJjeWQjueahOaWh+WtlwotIOWJjeWQjuaYvuekuuWtl+aVsOWPr+WcqOiuvue9ruS4reiwg+aVtAotIOWcqOiuvue9ruS4reW8gOWQryLotKrlkIPom4fmqKHlvI8iCgotLS0KCiMjIOi1m+aWhwoKIyMjIOWPguWKoOavlOi1mwoKMS4g54K55Ye75bqV6YOoIGDotZvmlodgIOiPnOWNlQoyLiDpgInmi6nopoHlj4LliqDnmoTmr5TotZvnsbvlnosKMy4g57O757uf6Ieq5Yqo5Yqg6L295q+U6LWb5paH56ugCjQuIOWujOaIkOaJk+Wtl+WQjuaIkOe7qeiHquWKqOS4iuS8oAo1LiDor7fms6jmhI/vvIzotZvmlofov4fnqIvkuK3kuI3lj6/mmoLlgZwKCiMjIyDmn6XnnIvmjpLooYzmppwK54K55Ye7IGDotZvmlodgIOiPnOWNleS4reeahOaOkuihjOamnArngrnlh7vmiJDnu6nmoI/lj7PkuIrop5LnmoTlpZbmna/lm77moIfvvIzmn6XnnIvmmbTot5/miZNQcm/lhoXpg6jnmoTlrZfmlbDmppwKCi0tLQoKIyMg57uD5Y2V5ZmoCgrnu4PljZXlmajnlKjkuo7lm7rlrprmlofmnKznmoTph43lpI3nu4PkuaDvvIzpgILlkIjnqoHnoLTnibnlrprlrZfor43miJbmrrXokL3jgIIKLSDmr4/nu4PlrozkuIDnu4TvvIzkvJroh6rliqjlvLnlh7rmnKznu4TlubPlnYfmiJDnu6kKCi0tLQoKIyMg5bi46KeB6Zeu6aKYCgojIyMgUTog5paw5omL5aaC5L2V5o+Q6auY5omT5a2X6YCf5bqm77yfCi0g5aSa57uD5YmNNTAw77yM5LitNTAw77yM5ZCONTAwCi0g55uu5qCH77ya5YmNNTAw5oC75a2X5pWw5o6n5Yi25ZyoODAw5a2X5bem5Y+z55qE5ZCM5pe25Z2H5Ye76L6+5YiwNuWHu++8jOWGjeW8gOWni+aJk+aWhwoKIyMjIFE6IOaUr+aMgeWTquS6m+aWh+eroOagvOW8j++8nwoKQTog5pSv5oyBIHR4dCDmlofmnKzmlofku7blkowgZXB1YiDnlLXlrZDkuabmoLzlvI/jgIIKCiMjIyBROiDlpoLkvZXosIPmlbTlrZfkvZPlpKflsI/vvJ8KCkE6IOWcqOWvueW6lOeql+WPo+ebtOaOpWN0cmwr6byg5qCH5rua6L2u77yM5oiW6K6+572u6aG16Z2iCgotLS0KCiMjIOaKgOacr+aUr+aMgQoK5aaC5pyJ6Zeu6aKY6K+36L+bUee+pCA3MTUxODcxNzUg5Lit5Y+N6aaI44CCCgpbIVtTdGFyIEhpc3RvcnkgQ2hhcnRdKGh0dHBzOi8vYXBpLnN0YXItaGlzdG9yeS5jb20vc3ZnP3JlcG9zPWZjeHh4ei9UeXBlU3VubnlQcm8uUmVhbGVhc2UmdHlwZT1EYXRlJmxlZ2VuZD10b3AtbGVmdCldKGh0dHBzOi8vd3d3LnN0YXItaGlzdG9yeS5jb20vI2ZjeHh4ei9UeXBlU3VubnlQcm8uUmVhbGVhc2UmRGF0ZSkK
+# 晴跟打Pro 使用手册
+
+**[晴跟打Pro]**-比晴跟打更好用的全平台跟打器，支持mac，win，web网页，**自带超高性能发文和赛文，全功能免费**
+
+UI大重构！支持mac液态玻璃，win云母亚克力
+
+内置双拼练习工具，基于[开源双拼练习工具](https://github.com/BlueSky-07/Shuang)深度优化！加入智能推送算法，双拼练习更高效！
+
+可连Q群发文载文，错字慢字重打，趣味贪吃蛇模式，对照模式，字帖模式，临摹模式，超好用~
+
+**[晴发文]**-一套性能强大的发文+赛文系统，文库中包含1万多本书籍，1亿+段每段200字左右的文段，支持完全随机，上下翻页，选中书籍定向发文等功能
+
+[晴发文](https://github.com/a810439322/preachSunny) 尚未开源，但仍全功能开放并免费使用，也欢迎其他发文工具接入发文系统，唯一要求：发文末尾署名-晴发文
+
+[晴跟打Pro]基于[晴跟打](https://github.com/fcxxxz/TypeSunny)深度优化和重构，在此致敬我自己，真是辛苦我了
+
+## 目录
+
+1. [软件简介](#软件简介)
+2. [快速开始](#快速开始)
+3. [常用快捷键](#常用快捷键)
+7. [赛文](#赛文)
+8. [练单器](#练单器)
+9. [常见问题](#常见问题)
+
+---
+
+## QQ支持说明
+
+支持的QQ版本为9.9.22.40990(不包含)之后的版本，目前2026.05.08版本为 9.9.29-47354，之后版本将长期支持~
+# 字帖模式 体验超棒！
+![字帖模式.png](introimages/zitie.png)
+# 一键极简！启动！~
+![一键极简.png](introimages/jijian.png)
+# 超多主题
+![超多主题.png](introimages/zhuti.png)
+# 通透模式！
+![通透模式.png](introimages/tongtou.png)
+# 通透+一键极简！
+![通透+一键极简.png](introimages/tongtoujijian.png)
+# 书架！
+![书架.png](introimages/shujia.png)
+
+---
+
+## 快速开始
+
+### 下载说明
+
+| 文件 | 适合用户 | 说明 |
+| --- | --- | --- |
+| `TypeSunnyPro-版本号-update.zip` | Windows 用户 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |
+| `TypeSunnyPro-版本号-macos-arm64.dmg` | Mac 用户 | Mac 用户请下载这个。打开 DMG 后先看 `1-安装步骤-先读我.txt`：把 `晴跟打Pro.app` 拖到“应用程序”，再运行 `2-首次打不开时运行.command`；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |
+| `TypeSunnyPro-版本号-macos-arm64.zip` | 应用内更新 | 给 macOS 应用内更新使用，普通用户不要优先下载。 |
+| `*-package.json` | 程序更新器 | 更新器读取的包清单，普通用户不用下载。 |
+
+### 第一次使用
+
+1. **运行**：双击 `晴跟打Pro.exe` 启动程序
+
+2. **文来！**：
+    - 文来按钮点击左键或Ctrl+R，可直接发文
+    - 请根据提示注册登录，帐号同昵称，无注册限制，可使用中文，密码加密存储，作者也看不到，请自己保存好帐号密码(后期会加邮件重置密码和改密功能)
+        - 设置页面可设置文来字数，文来难度，文来服务器地址
+            - Ctrl+P下翻页，Ctrl+O(是字母O不是数字0)上翻页，看到感兴趣的文可以继续往下看~也可以设置顺序发文或随机发文
+    - 文来按钮点击右键，可退出登录、切换服务器地址
+        - 允许加入任何自建发文服务，默认发文接口地址：https://typing.fcxxz.com/
+        - 自建方法：本地或服务器部署晴发文系统，如需自建，可直接问作者要docker镜像，如需用在外部发文，请遵守君子协定：发文末尾署名-晴发文
+
+3. **本地书籍跟打**：
+    - 将 txt 文件放入软件目录的 `文章` 文件夹
+    - 点击首页文章管理或Ctrl+B，方向上下左右都有功能，回车即可发文
+
+3. **赛文**：
+    - 自定义赛文服务器
+        - 允许加入任何自建赛文服务，默认赛文接口地址：https://typing.fcxxz.com/
+        - 自建方法：本地或服务器部署晴发文系统，如需自建，可直接问作者要docker镜像，如需用在外部发文，请遵守君子协定：发文末尾署名-晴发文
+    - 其他赛文：已接入锦标赛，极速杯，如需接入其他赛文，可联系作者接入
+
+---
+
+## 常用快捷键
+
+| 快捷键      | 功能       |
+|----------|----------|
+| F3       | 重新打当前文章  |
+| F4       | 从QQ群加载文章 |
+| F5       | 选QQ群     |
+| CTRL + E | 剪切板载文    |
+| Ctrl + R | 文来       |
+| Ctrl + P | 下一段      |
+| Ctrl + O | 上一段      |
+| Ctrl + L | 乱序重打     |
+
+### 贪吃蛇模式
+
+- 只显示当前位置前后的文字
+- 前后显示字数可在设置中调整
+- 在设置中开启"贪吃蛇模式"
+
+---
+
+## 赛文
+
+### 参加比赛
+
+1. 点击底部 `赛文` 菜单
+2. 选择要参加的比赛类型
+3. 系统自动加载比赛文章
+4. 完成打字后成绩自动上传
+5. 请注意，赛文过程中不可暂停
+
+### 查看排行榜
+点击 `赛文` 菜单中的排行榜
+点击成绩栏右上角的奖杯图标，查看晴跟打Pro内部的字数榜
+
+---
+
+## 练单器
+
+练单器用于固定文本的重复练习，适合突破特定字词或段落。
+- 每练完一组，会自动弹出本组平均成绩
+
+---
+
+## 常见问题
+
+### Q: 新手如何提高打字速度？
+- 多练前500，中500，后500
+- 目标：前500总字数控制在800字左右的同时均击达到6击，再开始打文
+
+### Q: 支持哪些文章格式？
+
+A: 支持 txt 文本文件和 epub 电子书格式。
+
+### Q: 如何调整字体大小？
+
+A: 在对应窗口直接ctrl+鼠标滚轮，或设置页面
+
+---
+
+## 技术支持
+
+如有问题请进Q群 715187175 中反馈。
+
+[![Star History Chart](https://api.star-history.com/svg?repos=fcxxxz/TypeSunnyPro.Realease&type=Date&legend=top-left)](https://www.star-history.com/#fcxxxz/TypeSunnyPro.Realease&Date)
