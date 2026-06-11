@@ -14,8 +14,6 @@ UI大重构！支持mac液态玻璃，win云母亚克力
 
 [晴跟打Pro]基于[晴跟打](https://github.com/fcxxxz/TypeSunny)深度优化和重构，在此致敬我自己，真是辛苦我了
 
-[![Star History Chart](https://api.star-history.com/svg?repos=fcxxxz/TypeSunnyPro.Realease&type=Date&legend=top-left)](https://www.star-history.com/#fcxxxz/TypeSunnyPro.Realease&Date)
-
 ## 目录
 
 1. [软件简介](#软件简介)
@@ -144,3 +142,5 @@ A: 在对应窗口直接ctrl+鼠标滚轮，或设置页面
 ## 技术支持
 
 如有问题请进Q群 715187175 中反馈。
+
+[![Star History Chart](https://api.star-history.com/svg?repos=fcxxxz/TypeSunnyPro.Realease&type=Date&legend=top-left)](https://www.star-history.com/#fcxxxz/TypeSunnyPro.Realease&Date)
