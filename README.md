@@ -50,7 +50,7 @@ UI大重构！支持mac液态玻璃，win云母亚克力
 | 文件 | 适合用户 | 说明 |
 | --- | --- | --- |
 | `TypeSunnyPro-版本号-update.zip` | Windows 用户 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |
-| `TypeSunnyPro-版本号-macos-arm64.dmg` | Mac 用户 | Mac 用户请下载这个。打开 DMG 后先看 `1-安装步骤-先读我.txt`：把 `晴跟打Pro.app` 拖到“应用程序”，再运行 `2-首次打不开时运行.command`；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |
+| `TypeSunnyPro-版本号-macos-arm64.dmg` | Mac 用户 | Mac 用户请下载这个。打开 DMG 后先看 `1-安装步骤-先读我.txt`：把 `晴跟打Pro.app` 拖到“应用程序”，再运行 `2-首次打不开时运行.command`；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。如提示输入监控/辅助功能，需允许“晴跟打Pro按键监听”；列表里没有时点“+”添加 `~/Library/Application Support/晴跟打Pro/KeyMonitor/晴跟打Pro按键监听`，然后重启晴跟打Pro。 |
 | `TypeSunnyPro-版本号-macos-arm64.zip` | 应用内更新 | 给 macOS 应用内更新使用，普通用户不要优先下载。 |
 | `*-package.json` | 程序更新器 | 更新器读取的包清单，普通用户不用下载。 |
 
