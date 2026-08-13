@@ -2,8 +2,8 @@
   "schema_version": 1,
   "releases": [
     {
-      "version": "20260730.1028",
-      "published_at": "2026-07-30T02:35:42.829556Z",
+      "version": "20260813.1833",
+      "published_at": "2026-08-13T10:39:21.405836Z",
       "notes": "chore： macos27液态玻璃支持，所有文章都计算难度"
     },
     {
