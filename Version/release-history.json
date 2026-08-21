@@ -2,9 +2,9 @@
   "schema_version": 1,
   "releases": [
     {
-      "version": "20260819.1315",
-      "published_at": "2026-08-19T05:21:48.428203Z",
-      "notes": "feat： 支持ctrl+z撤回，可多次\n兼容魔虎rime词提\n修复练单进度条，成绩百分比的问题"
+      "version": "20260821.1121",
+      "published_at": "2026-08-21T03:27:11.256080Z",
+      "notes": "feat：成绩栏改用等宽字体（Windows为Consolas、macOS为Menlo）\n        本地文支持智能分段\nfix：修复极简模式下练单窗口会跳动的BUG\n修复q群增强，连接不稳定的问题"
     },
     {
       "version": "20260720.0933",
