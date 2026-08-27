@@ -2,9 +2,9 @@
   "schema_version": 1,
   "releases": [
     {
-      "version": "20260826.1733",
-      "published_at": "2026-08-26T09:38:48.376516Z",
-      "notes": "fix： 本地文增加记忆功能，本地文状态关闭后，打开还是在本地文\n统一优化光标移动方法，home/end，ctrl+z，commend+左右等操作都支持\n修复Windows下输入法有未上屏编码时按两下Shift，编码会被重复上屏两遍的问题\n修复过滤功能的开关默认显示BUG"
+      "version": "20260827.1953",
+      "published_at": "2026-08-27T11:59:37.025907Z",
+      "notes": "fix： 修复未上屏候选编码删除会多删一个字的bug\n修复按住shift不能删除的bug"
     },
     {
       "version": "20260720.0933",
