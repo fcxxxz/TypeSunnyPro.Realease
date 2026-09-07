@@ -2,9 +2,9 @@
   "schema_version": 1,
   "releases": [
     {
-      "version": "20260828.2137",
-      "published_at": "2026-08-28T13:43:47.325901Z",
-      "notes": "fix： 修复不能重复输入同字的bug"
+      "version": "20260907.1538",
+      "published_at": "2026-09-07T07:44:23.938924Z",
+      "notes": "fix： 修复本地文手动换段，按ctrl+P跳段的问题"
     },
     {
       "version": "20260720.0933",
