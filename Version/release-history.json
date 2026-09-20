@@ -2,9 +2,9 @@
   "schema_version": 1,
   "releases": [
     {
-      "version": "20260915.1744",
-      "published_at": "2026-09-15T09:51:46.745812Z",
-      "notes": "fix：修复rime词提一直拷贝的BUG\n修复mac普通发群时几个bug"
+      "version": "20260920.1443",
+      "published_at": "2026-09-20T06:47:39.586532Z",
+      "notes": "fix：修复AOT打包编译错误——给QQHelper新增TryGetCachedGroupNumber时漏了Aot shim导致NativeAOT发布CS0117。AOT侧经宿主新增groupNumber操作查询群号（宿主是新进程、进程内缓存必空，未命中先扫描一次会话列表再查），shim在本进程按群名记住结果避免重复拉起宿主"
     },
     {
       "version": "20260910.1155",
