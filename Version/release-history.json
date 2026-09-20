@@ -4,12 +4,93 @@
     {
       "version": "20260920.1443",
       "published_at": "2026-09-20T06:47:39.586532Z",
-      "notes": "fix：修复AOT打包编译错误——给QQHelper新增TryGetCachedGroupNumber时漏了Aot shim导致NativeAOT发布CS0117。AOT侧经宿主新增groupNumber操作查询群号（宿主是新进程、进程内缓存必空，未命中先扫描一次会话列表再查），shim在本进程按群名记住结果避免重复拉起宿主"
+      "notes": "feat：词提样式规则——设置里按需添加样式项，可按码长（1码~5码+）或候选序（1选~10选+）指定颜色、字体（系统字体选择器）、加粗、斜体、直线/波浪下划线；只设置填了的属性其余沿用默认色，多项命中时后添加的覆盖先添加的\nchore：移除设置中的\"词提1/2/3简色、4码色\"平铺项——已配置过的旧颜色首次使用时自动迁移为等价的样式规则，未配置过的沿用原默认色，自定义一律走样式规则；词提选重色与关闭所有颜色保留\nfeat：词提多码取码——一个词在词库中有多个编码时可选择按\"词库顺序\"取第一个或取\"最短编码\"（同长取靠前的），保存后实时生效，理论码长同步按所选编码计算；词库导入改为保存全部编码，老词库升级后首次使用会自动重导入一次\nfix：本地文标题栏现在会显示难度——组合层漏传难度格式器导致本地文从未计算难度，已接线（与文来同源）\nchore：预测显示默认项去掉\"个难\"（设置中仍可手动开启）；预测默认显示速度与置信\nfix：修复预测速度虚高的根因——预测训练只接受正常跟打轮（文章类来源、非重打、≥30字），练单/字根/错字重打等短平快轮次不再污染基线；计时毛刺轮（速度/击键超出人类可能范围）整轮丢弃\nfix：存量画像自愈——启动加载时检测到不可能的基线值（如速度被污染成上千字/分）自动重置为默认并快速重建，健康的打字单元数据全部保留\nfeat：接线预测校准——每轮打完用\"实际成绩 vs 载文预测\"持续修正全局校准因子，预测会越用越准\nfix：预测基线权重封顶20000字，历史数据可被新数据稀释，不再是无衰减的终身平均\nfix：修复载文不支持尾部预测行格式的问题——尾标记\"-----第N段\"后追加的内容（如发文附带的预测行）不再混入正文\nfeat：预测信息现在会显示在标题栏（难度之后），受\"启用预测\"开关与\"预测显示\"设置控制\nfix：修复群赛文和qq群机器人不统一的BUG\nfix：修复AOT打包编译错误（QQHelper的AOT shim缺失导致NativeAOT发布失败，已补齐，本版已包含）",
+      "commit": "84e9f360a9dba1e1e6b83e5c9c08282338396699"
+    },
+    {
+      "version": "20260915.1744",
+      "published_at": "2026-09-15T09:51:49.000000Z",
+      "notes": "fix：修复rime词提一直拷贝的BUG\n修复mac普通发群时几个bug"
+    },
+    {
+      "version": "20260914.1827",
+      "published_at": "2026-09-14T10:33:50.000000Z",
+      "notes": "feat： 新增WebDAV云同步，支持多设备同步进度与文章\n启用预测改为纯本地控制，置信不足会提醒\nmac新增非增强发文，速度堪比增强模式，很爽\nwin端qq发文修复两个获取焦点的小bug"
     },
     {
       "version": "20260910.1155",
       "published_at": "2026-09-10T03:55:53.000000Z",
       "notes": "feat： 本地文新增WebDAV云同步，支持多设备同步进度与文章（自动同步可开关；首次使用检测到分歧时可选上传到云端或从云端下载）"
+    },
+    {
+      "version": "20260907.2211",
+      "published_at": "2026-09-07T14:17:19.000000Z",
+      "notes": "fix： 修复自动上屏和顶字掉准的BUG"
+    },
+    {
+      "version": "20260907.1538",
+      "published_at": "2026-09-07T07:44:25.000000Z",
+      "notes": "fix： 修复本地文手动换段，按ctrl+P跳段的问题"
+    },
+    {
+      "version": "20260828.2137",
+      "published_at": "2026-08-28T13:43:50.000000Z",
+      "notes": "fix： 修复不能重复输入同字的bug"
+    },
+    {
+      "version": "20260828.1649",
+      "published_at": "2026-08-28T08:56:30.000000Z",
+      "notes": "feat： 本地文新增目录功能"
+    },
+    {
+      "version": "20260827.1953",
+      "published_at": "2026-08-27T11:59:40.000000Z",
+      "notes": "fix： 修复未上屏候选编码删除会多删一个字的bug\n修复按住shift不能删除的bug"
+    },
+    {
+      "version": "20260826.1733",
+      "published_at": "2026-08-26T09:38:50.000000Z",
+      "notes": "fix： 本地文增加记忆功能，本地文状态关闭后，打开还是在本地文\n统一优化光标移动方法，home/end，ctrl+z，commend+左右等操作都支持\n修复Windows下输入法有未上屏编码时按两下Shift，编码会被重复上屏两遍的问题\n修复过滤功能的开关默认显示BUG"
+    },
+    {
+      "version": "20260825.0932",
+      "published_at": "2026-08-25T01:38:36.000000Z",
+      "notes": "fix：修复方向键无法移动光标的bug\n修复换行后光标位置会偏移到下一行的bug"
+    },
+    {
+      "version": "20260822.0032",
+      "published_at": "2026-08-21T16:40:22.000000Z",
+      "notes": "fix：修复win下不能用ctrl+z的问题\n修复win下设置页面不能更新软件的问题"
+    },
+    {
+      "version": "20260821.1121",
+      "published_at": "2026-08-21T03:27:13.000000Z",
+      "notes": "feat：成绩栏改用等宽字体（Windows为Consolas、macOS为Menlo）\n        本地文支持智能分段\nfix：修复极简模式下练单窗口会跳动的BUG\n修复q群增强，连接不稳定的问题"
+    },
+    {
+      "version": "20260819.1315",
+      "published_at": "2026-08-19T05:21:50.000000Z",
+      "notes": "feat： 支持ctrl+z撤回，可多次\n兼容魔虎rime词提\n修复练单进度条，成绩百分比的问题"
+    },
+    {
+      "version": "20260813.1851",
+      "published_at": "2026-08-13T10:57:28.000000Z",
+      "notes": "feat：最佳魔然词提！\n\n新增成绩增加理论码长项\n新增字距行距设置\n新增皇叔自动解密\n\n修复练单器进度控制"
+    },
+    {
+      "version": "20260730.1028",
+      "published_at": "2026-07-30T02:35:45.000000Z",
+      "notes": "# 当前版本更新说明\r\n\r\nchore： macos27液态玻璃支持，所有文章都计算难度"
+    },
+    {
+      "version": "20260728.0950",
+      "published_at": "2026-07-28T01:55:56.000000Z",
+      "notes": "# 当前版本更新说明\r\n\r\nfix： mac练单数据打包BUG修复，兼容用户练单器自定义单行文本"
+    },
+    {
+      "version": "20260720.0934",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\n# 当前版本更新说明\n\nchore： windows增加QQ增强模式！晴跟打原创独家功能，不用打开QQ窗口也能发文载文~"
     },
     {
       "version": "20260720.0933",
@@ -42,6 +123,11 @@
       "notes": "chore：\nmac大幅优化应用启动速度\nmac优化安装引导，加固定证书，不用每次更新都重新授权\n清屏算一个回改\n签名设置加防呆设计，设置签名自动启动签名开关"
     },
     {
+      "version": "20260716.2120",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\n# 当前版本更新说明\n\nchore：\nqq群发文优化，增加超时时间等等防止卡死\n增加成绩栏开关快捷键\n预编辑字母条加开关\n预编辑字母条和候选框支持自定义高度调整"
+    },
+    {
       "version": "20260715.2237",
       "published_at": "2026-07-16T06:49:19.839062Z",
       "notes": "chore：\nwindows软件启动速度超大幅提升！\n资源占用究极优化，主题切换速度超超超大幅提升！！！\n新增打字机模式自定义高度\n一键极简增加实时成绩栏开关\n修复一键极简模式下选群导致的闪退问题\n修复windows字体切换识别问题\n点击菜单项右侧位置校准，命令中进入菜单位置校准\n在线升级不可用时，仍允许忽略版本或今日不提示\n修复windows-qq发文，焦点没回来的bug"
@@ -50,6 +136,161 @@
       "version": "20260715.1716",
       "published_at": "2026-07-15T10:12:23.221282Z",
       "notes": "chore：\nwindows软件启动速度超大幅提升！\n资源占用究极优化，主题切换速度超超超大幅提升！！！\n一键极简增加实时成绩栏开关\n修复一键极简模式下选群导致的闪退问题\n修复windows字体切换识别问题\n点击菜单项右侧位置校准，命令中进入菜单位置校准\n在线升级不可用时，仍允许忽略版本或今日不提示"
+    },
+    {
+      "version": "20260712.1633",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\r\n\r\n更新魔然字提\r\n登录过期自动重新登录"
+    },
+    {
+      "version": "20260712.0858",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nchore：优化平滑光标，极致的丝滑！\n修复逐字滚动开关不实时生效的BUG"
+    },
+    {
+      "version": "20260705.0038",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\n去掉极速和锦标赛的登录和直接载文功能，改为跳转网页端\n赛文增加虎杯项，也是跳转网页端\n\n修复错字重打的错字统计BUG\n修复mac端改AOT包导致的不能群载文发文等BUG\n修复字根练习的卡顿问题\n\n优化成绩栏报表显示\n优化平滑光标效果\n优化逐字滚动效果\n优化打字暂停时的鼠标显示\n优化错字重打和慢字重打，改为不触发实时成绩计算"
+    },
+    {
+      "version": "20260703.1721",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nchore：大幅优化内存占用，mac端额外优化启动速度\nfeat：增加字根练习功能！(暂时只有虎码字根，若有其他字根表，可联系作者内置，或自行添加\n          增加练单历史功能，在练单窗口可打开\nfix：修复赛文可以触发错字重打和慢字重打的BUG\n        只有一行文字时，逐字滚动不触发"
+    },
+    {
+      "version": "20260628.2221",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix: 设置里明确区分三种跟打模式\n对照模式下打完一段不会清空跟打区的BUG已修复"
+    },
+    {
+      "version": "20260628.0922",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix：\n优化赛文卡顿问题\n成绩统计BUG修复"
+    },
+    {
+      "version": "20260627.1403",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix：\n顶部实时成绩换段保留，打字才清空\n修复命令行练单指令没有全局乱序的BUG\n修复编码下显打开时，背景色高度没有跟随变高的BUG\n修复练单场景下总成绩统计错误的BUG\n优化命令行发文，支持更多格式，可不指定难度，直接输字数"
+    },
+    {
+      "version": "20260626.1839",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix：\n支持自定义快捷键！\n支持窗口直接发文指令！ 如 难200 或 前500 或 1-500 10 3 这三类格式\n修复windows下输入法切换不到小狼毫和虎爪等tsf的问题\n更新一套好看的最小化最大化关闭图标\n一点其他优化"
+    },
+    {
+      "version": "20260624.1901",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix：修复字体渲染BUG\n标题栏和按钮的字体大小调整，更和谐"
+    },
+    {
+      "version": "20260623.1820",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfeat：增加错字动效，更好看一点，不过错字为什么要好看呢，俺也不知道，可能是想对自己宽容一点叭\n去掉双击ctrl，防误触，自定义快捷键以后再加\n修复了win下背景色错位的问题\n优化了平滑光标和平滑背景的效果"
+    },
+    {
+      "version": "20260622.2040",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix：修复标顶+顶字统计\n优化长文性能\n修复重打统计\n修复成绩区UI拖动BUG\n统一弹出式窗口逻辑\n兼容发文首行空行的BUG载文\n剪贴板载文优化"
+    },
+    {
+      "version": "20260621.0957",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix：多个字上屏或者顶屏时，平滑动画优化"
+    },
+    {
+      "version": "20260620.2241",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix：修复打首字和换行的时候候选框位置错误的bug"
+    },
+    {
+      "version": "20260620.1335",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix: 成绩计算优化，更准了呢"
+    },
+    {
+      "version": "20260620.0012",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix：修复mac成绩偏低的BUG"
+    },
+    {
+      "version": "20260619.2044",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\nfix：\n成绩计算相关功能补齐\n平滑光标开关失效问题解决，平滑效果优化\n贪吃蛇效果优化，保留打错色开关\n字体设置优化\n英文换行优化，不断词"
+    },
+    {
+      "version": "20260618.1959",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 更新说明\n\n修复晴杯不能载文的问题"
+    },
+    {
+      "version": "20260618.1705",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260618.1705-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260618.1705-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260618.1705-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。如提示输入监控/辅助功能，需允许“晴跟打Pro按键监听”；列表里没有时点“+”添加 ~/Library/Application Support/晴跟打Pro/KeyMonitor/晴跟打Pro按键监听，然后重启晴跟打Pro。 |\n| TypeSunnyPro-20260618.1705-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260618.1705-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\nfix锛氬仛涓€杞畐indows鐨勫吋瀹?"
+    },
+    {
+      "version": "20260617.2312",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260617.2312-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260617.2312-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260617.2312-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。如提示输入监控/辅助功能，需允许“晴跟打Pro按键监听”；列表里没有时点“+”添加 ~/Library/Application Support/晴跟打Pro/KeyMonitor/晴跟打Pro按键监听，然后重启晴跟打Pro。 |\n| TypeSunnyPro-20260617.2312-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260617.2312-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\nfeat：新增慧星进度条+卫星进度条！\n新增贪吃蛇炫彩样式！\n放开赛文功能\nfix：修复失焦导致输入法失效的BUG\n修复长文卡顿问题\nchore：右键改为全局搜索"
+    },
+    {
+      "version": "20260615.2000",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260615.2000-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260615.2000-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260615.2000-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。如提示输入监控/辅助功能，需允许“晴跟打Pro按键监听”；列表里没有时点“+”添加 ~/Library/Application Support/晴跟打Pro/KeyMonitor/晴跟打Pro按键监听，然后重启晴跟打Pro。 |\n| TypeSunnyPro-20260615.2000-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260615.2000-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\nchore：优化磨砂玻璃表现"
+    },
+    {
+      "version": "20260615.1932",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260615.1932-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260615.1932-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260615.1932-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。如提示输入监控/辅助功能，需允许“晴跟打Pro按键监听”；列表里没有时点“+”添加 ~/Library/Application Support/晴跟打Pro/KeyMonitor/晴跟打Pro按键监听，然后重启晴跟打Pro。 |\n| TypeSunnyPro-20260615.1932-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260615.1932-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\nchore：简单适配windows的通透模式\r\nfix：修复练单不能换行的bug\r\n修复焦点淡化开启时，焦点不跟随的BUG"
+    },
+    {
+      "version": "20260613.2232",
+      "published_at": "2026-06-13T14:36:55.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260613.2232-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260613.2232-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260613.2232-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。如提示输入监控/辅助功能，需允许“晴跟打Pro按键监听”；列表里没有时点“+”添加 ~/Library/Application Support/晴跟打Pro/KeyMonitor/晴跟打Pro按键监听，然后重启晴跟打Pro。 |\n| TypeSunnyPro-20260613.2232-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260613.2232-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\nchore:按键监听兼容"
+    },
+    {
+      "version": "20260613.1554",
+      "published_at": "2026-06-11T01:35:33.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260613.1554-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260613.1554-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260613.1554-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |\n| TypeSunnyPro-20260613.1554-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260613.1554-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\nfix：再修复几个设置页的BUG"
+    },
+    {
+      "version": "20260612.1824",
+      "published_at": "2026-06-11T01:35:33.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260612.1824-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260612.1824-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260612.1824-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |\n| TypeSunnyPro-20260612.1824-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260612.1824-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\nfix: 修复了数不清的问题\r\n做了数不清的UI优化和性能优化"
+    },
+    {
+      "version": "20260611.1007",
+      "published_at": "2026-06-11T01:35:33.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260611.1007-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260611.1007-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260611.1007-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |\n| TypeSunnyPro-20260611.1007-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260611.1007-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\ndocs: plan settings structure refresh"
+    },
+    {
+      "version": "20260611.0959",
+      "published_at": "2026-06-11T01:35:33.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260611.0959-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260611.0959-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260611.0959-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |\n| TypeSunnyPro-20260611.0959-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260611.0959-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\ndocs: plan settings structure refresh"
+    },
+    {
+      "version": "20260611.0948",
+      "published_at": "2026-06-11T01:46:05.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260611.0948-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260611.0948-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260611.0948-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |\n| TypeSunnyPro-20260611.0948-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260611.0948-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\ndocs: move star history chart to end"
+    },
+    {
+      "version": "20260611.0946",
+      "published_at": "2026-06-11T01:46:05.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260611.0946-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260611.0946-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260611.0946-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |\n| TypeSunnyPro-20260611.0946-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260611.0946-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\ndocs: restore README markdown"
+    },
+    {
+      "version": "20260611.0940",
+      "published_at": "2026-06-11T01:35:33.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260611.0940-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260611.0940-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260611.0940-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |\n| TypeSunnyPro-20260611.0940-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260611.0940-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\ndocs: move star history chart to end"
+    },
+    {
+      "version": "20260610.1837",
+      "published_at": "2026-06-09T14:00:32.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260610.1837-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260610.1837-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260610.1837-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |\n| TypeSunnyPro-20260610.1837-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260610.1837-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\nfeat：增加打字机模式\r\n设置页优化，主题优化\r\n修复发文不复制的BUG\r\n修复载文乱码的BUG\r\n注册成功加提示\r\n打开一键极简时弹防呆提示\r\n字提优化\r\n本地过滤器优化\r\n设置页重排优化\r\nqq群尝试修复"
+    },
+    {
+      "version": "20260609.2157",
+      "published_at": "2026-06-09T14:00:32.000000Z",
+      "notes": "## 下载说明\n\n| 文件 | 平台 | 用途 |\n| --- | --- | --- |\n| TypeSunnyPro-20260609.2157-windows.zip | Windows x64 | Windows 轻量包和应用内更新包，需要先安装 .NET 10 Desktop Runtime。 |\n| TypeSunnyPro-20260609.2157-package.json | Windows | 更新器读取的包清单，普通用户不用下载。 |\n| TypeSunnyPro-20260609.2157-macos-arm64.dmg | macOS Apple Silicon | Mac 用户请下载这个。打开 DMG 后先看 1-安装步骤-先读我.txt：把 晴跟打Pro.app 拖到“应用程序”，再运行 2-首次打不开时运行.command；被系统拦截时到 系统设置 > 隐私与安全性 点“仍要打开”。 |\n| TypeSunnyPro-20260609.2157-macos-arm64.zip | macOS Apple Silicon | 应用内更新使用的压缩包，普通用户不要优先下载。 |\n| TypeSunnyPro-20260609.2157-macos-arm64-package.json | macOS | 更新器读取的包清单，普通用户不用下载。 |\n\n## 更新说明\n\nImprove macOS updates and install guidance"
     }
   ]
 }
