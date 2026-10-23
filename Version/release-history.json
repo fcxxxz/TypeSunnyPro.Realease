@@ -2,6 +2,12 @@
   "schema_version": 1,
   "releases": [
     {
+      "version": "20261023.1357",
+      "published_at": "2026-10-23T06:02:31.875123Z",
+      "notes": "fix：修 Windows 键准误扣——preedit 等于已打编码串时是输入法滞后，不判清屏\n\nWin 实测：面=mm 第二键读到的 preedit 还停在上一帧（只显示 m），超前对齐把 codes=m + 本键 m 与 preedit=m 做成后缀匹配，误判成前一码被清屏，每遇双字母白扣 1 退格+1 废码。新增判据：preedit 恰好等于本键之前已打的编码串时直接不判（真清屏一定比 codes 短，不可能相等）；用 295 次上屏的 Windows 日志回放验证，17 次误判归零。补回归测试 LaggingPreeditEqualToCodesNeverRecordsWaste。\n\nfeat：加 F3 重打性能诊断（临时）——分段计时写 LogRoot/性能诊断.log\n\n用户反馈 Windows 下 F3 重打很卡，先定位再改：窗口侧量同步耗时和 UI 队列排空耗时（区分 VM 干活卡还是布局/渲染卡），\nLoadArticleCore 量 结算/字数统计/难度/建会话/通知 五段，RetryCurrentInput 量 记录进度/载文/收尾。\n日志 2MB 轮换，未 Attach 时零开销；键准诊断日志本来就有 4MB 上限（.1 备份，合计 ≤8MB）。",
+      "commit": "f46462eae5bace6923fff18332f08bd78abcc8b1"
+    },
+    {
       "version": "20261022.1906",
       "published_at": "2026-10-22T11:13:46.177902Z",
       "notes": "fix：修复键准BUG，性能优化",
