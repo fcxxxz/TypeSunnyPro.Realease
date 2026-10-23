@@ -2,6 +2,12 @@
   "schema_version": 1,
   "releases": [
     {
+      "version": "20261023.1835",
+      "published_at": "2026-10-23T10:42:59.205326Z",
+      "notes": "perf：修 F3 重打/载文卡秒级——设置读取不再每次 stat 配置文件\n\n根因（Windows 实测 + 本地探针定位）：LegacySettingsStore.LoadDocument() 每次读设置都做\nCaptureFileSignature()（File.Exists + FileInfo 两次 stat 系统调用）。打字/载文热路径上每个\n字形要读好几次设置（词提开关、方案名、多码偏好、单字模式……），260 字载文 = 几千次 stat；\nWindows 上每次 stat 被杀软过滤驱动放大到毫秒级 → F3 重打 1901ms（用户实测，7.2ms/字线性）。\n本地探针（F3RetypePerfProbeTests）：短路 stat 后 260 字建显示模型 88-91ms → 2-14ms。\n\n修法：外部改动检测按时间节流（默认 500ms 窗口内共享一次 stat，自己 SetString 保存后签名\n必新鲜并顺延窗口），外部改动检测保留——只是从\"下一次读可见\"变成\"窗口过后可见\"；\ninterval=0 保持旧立即检测口径。SetSession 细分计时补进 性能诊断.log 供 Windows 复测。\n\n验证：本地 260 字首载 110→27ms、同文再载 139→21ms，建显示模型 91→3ms；\nCore 851 / Infrastructure 692（含新增 节流共享单次 stat、窗口后仍能检测外部改动 两个回归）全过。",
+      "commit": "6e6f21ca23fe1587edd603526e032d97e14a8f1c"
+    },
+    {
       "version": "20261023.1357",
       "published_at": "2026-10-23T06:02:31.875123Z",
       "notes": "fix：修 Windows 键准误扣——preedit 等于已打编码串时是输入法滞后，不判清屏\n\nWin 实测：面=mm 第二键读到的 preedit 还停在上一帧（只显示 m），超前对齐把 codes=m + 本键 m 与 preedit=m 做成后缀匹配，误判成前一码被清屏，每遇双字母白扣 1 退格+1 废码。新增判据：preedit 恰好等于本键之前已打的编码串时直接不判（真清屏一定比 codes 短，不可能相等）；用 295 次上屏的 Windows 日志回放验证，17 次误判归零。补回归测试 LaggingPreeditEqualToCodesNeverRecordsWaste。\n\nfeat：加 F3 重打性能诊断（临时）——分段计时写 LogRoot/性能诊断.log\n\n用户反馈 Windows 下 F3 重打很卡，先定位再改：窗口侧量同步耗时和 UI 队列排空耗时（区分 VM 干活卡还是布局/渲染卡），\nLoadArticleCore 量 结算/字数统计/难度/建会话/通知 五段，RetryCurrentInput 量 记录进度/载文/收尾。\n日志 2MB 轮换，未 Attach 时零开销；键准诊断日志本来就有 4MB 上限（.1 备份，合计 ≤8MB）。",
