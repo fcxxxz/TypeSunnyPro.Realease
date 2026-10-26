@@ -2,6 +2,12 @@
   "schema_version": 1,
   "releases": [
     {
+      "version": "20261026.1554",
+      "published_at": "2026-10-26T08:00:14.241123Z",
+      "notes": "feat：击键虚高诊断——合成键欠账链路打日志，抵扣失败当场落警报\n\n用户反馈打文击键异常增高而速度不变 = 同一键被合成键与物理键双计（3eed9df7 修过一类，非必现）。\n键准诊断.log 补三处现场：欠账建立（owner/键数/截止）、欠账抵扣（进环形缓冲随上屏带出）、\n双计警报（有欠账但物理键晚于截止、抵扣失败——该键将被重复计数，立即落盘）；\n每键行加 hit= 计数（一次击键 hit 跳 2 直接可见），上屏行 合成补键 改为实际补记键数。\n探针验证：迟到键抵扣成功无警报；晚于截止的键触发 双计警报 owner=0 键时刻/截止/剩余欠账/hit。\n\nrevert：撤掉击键虚高诊断日志（未确认的改动，回退 9c766342）",
+      "commit": "e9fb523d9eca46078781ef8b63bdb8aaaf1ca5b4"
+    },
+    {
       "version": "20261023.1835",
       "published_at": "2026-10-23T10:42:59.205326Z",
       "notes": "perf：修 F3 重打/载文卡秒级——设置读取不再每次 stat 配置文件\n\n根因（Windows 实测 + 本地探针定位）：LegacySettingsStore.LoadDocument() 每次读设置都做\nCaptureFileSignature()（File.Exists + FileInfo 两次 stat 系统调用）。打字/载文热路径上每个\n字形要读好几次设置（词提开关、方案名、多码偏好、单字模式……），260 字载文 = 几千次 stat；\nWindows 上每次 stat 被杀软过滤驱动放大到毫秒级 → F3 重打 1901ms（用户实测，7.2ms/字线性）。\n本地探针（F3RetypePerfProbeTests）：短路 stat 后 260 字建显示模型 88-91ms → 2-14ms。\n\n修法：外部改动检测按时间节流（默认 500ms 窗口内共享一次 stat，自己 SetString 保存后签名\n必新鲜并顺延窗口），外部改动检测保留——只是从\"下一次读可见\"变成\"窗口过后可见\"；\ninterval=0 保持旧立即检测口径。SetSession 细分计时补进 性能诊断.log 供 Windows 复测。\n\n验证：本地 260 字首载 110→27ms、同文再载 139→21ms，建显示模型 91→3ms；\nCore 851 / Infrastructure 692（含新增 节流共享单次 stat、窗口后仍能检测外部改动 两个回归）全过。",
