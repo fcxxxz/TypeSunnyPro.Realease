@@ -2,6 +2,12 @@
   "schema_version": 1,
   "releases": [
     {
+      "version": "20261030.1201",
+      "published_at": "2026-10-30T04:08:11.485008Z",
+      "notes": "feat：随机发文，增加难度权重！",
+      "commit": "a251f151d2908a9981481aaf55c3f9bea0dabd32"
+    },
+    {
       "version": "20261027.1824",
       "published_at": "2026-10-27T10:31:15.165497Z",
       "notes": "fix：去掉日志输出，性能提升",
