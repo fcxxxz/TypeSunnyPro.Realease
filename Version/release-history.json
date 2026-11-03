@@ -2,6 +2,12 @@
   "schema_version": 1,
   "releases": [
     {
+      "version": "20261103.1719",
+      "published_at": "2026-11-03T09:26:08.190038Z",
+      "notes": "chore：慧星动画性能优化，打字卡顿减少，CPU占用减少",
+      "commit": "4218b8864628107bfc662cba0a84de27579c0951"
+    },
+    {
       "version": "20261030.1201",
       "published_at": "2026-10-30T04:08:11.485008Z",
       "notes": "feat：随机发文，增加难度权重！",
