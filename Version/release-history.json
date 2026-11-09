@@ -2,6 +2,12 @@
   "schema_version": 1,
   "releases": [
     {
+      "version": "20261109.1741",
+      "published_at": "2026-11-09T09:47:00.575473Z",
+      "notes": "feat：练单器里新增循环器模式\n\nfeat：练单器里新增循环器模式",
+      "commit": "cc12ba6760d578aadccd81272cc7ec48f50116d2"
+    },
+    {
       "version": "20261106.1034",
       "published_at": "2026-11-06T02:41:21.713172Z",
       "notes": "fix：每日复盘统计窗口复用时不重读存档，查看复盘按钮停在打开那一刻的旧状态\n\nchore：移除性能诊断临时日志（F3/载文分段计时，使命已完成）\n\nf46462ea 引入的临时分段计时诊断，F3 卡顿问题（6e6f21ca）已修复归档，\n按约定删除整套收集：DiagnosticsTimingLog、UseAppPathService 挂载、\nLoadArticleCore/RetryCurrentInput/SetSession/全局快捷键窗口侧共 4 处计时\n写入点，以及 F3 探针测试里的日志转储段（探针自身计时保留）。\nPerformanceHotPathTests/MainWindowCompositionTests/F3RetypePerfProbeTests\n过滤集连跑 5 次结果与改动前基线完全一致（14 个失败均为存量源码契约断言）。\n\nchore：本地发文的保留换行功能优化，不用打回车，换行仅用来显示效果",
