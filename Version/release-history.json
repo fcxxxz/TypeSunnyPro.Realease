@@ -2,6 +2,12 @@
   "schema_version": 1,
   "releases": [
     {
+      "version": "20261110.1606",
+      "published_at": "2026-11-10T08:12:35.865292Z",
+      "notes": "fix：本地文段首空行复活——分段切口落在换行前的行尾空格上\n\n切口除了正好压在换行符，还可能压在上一行行尾残留的空格上（半角/全角）。\n旧 TrimEdgeLineBreaks 只认段首直接是 \\r/\\n，空格挡在前面就整段放行；且\n修剪先于“去除空格”执行，空格被删后 \\r\\n 重新露头，段首渲染仍是空行\n（伪像报告(1-641章) 第70段 进度20642 实测复现：段文“ \\r\\n酒保笑意一闪…”）。\n\n- 修剪挪到字集/正则过滤与去除空格之后，正文定型后一次成型\n- TrimEdgeBlankLineRuns：边缘空白串（空格+换行混合）含换行才整串处理，\n  段首剪到串内最后一个换行为止（保住本段行首缩进），段尾剪到第一个\n  换行为止；纯空格串不剪（去除空格关闭时空格属于正文）\n- 回归测试×3：去除空格开/关两口径的段首“ \\r\\n　　”、段尾“ \\r\\n”\n- Infrastructure 723 全绿；Avalonia LocalArticle 过滤集 2 失败经 stash\n  基线对照确认为干净 HEAD 存量，与本次改动无关\n\nfix：循环器沉入钳制到 length-1，队尾单位永远轮不到\n\nSinkHeadBatch 越界时 insertPos 钳到 _units.Count-1，沉入的单位永远插在\n队尾之前：最初排在队尾的那个单位被钉死在队尾，队首批次永远取不到它，\n已练数卡在 N-1（qinggenda cyclerQueue.mjs 同源移植时已修，注释点名此缺陷）。\n\n- 钳制放宽到 _units.Count（最多沉到队尾，List.Insert(Count) 即追加），\n  队尾单位会被后来者顶开，人人轮得到\n- 回归测试：7 单位批 2 连打 30 轮，断言初始队尾 u6 进入过批次、已练数达 7\n  （修复前 u6 从未出现）\n- CleanBatchSinkingFollowsMoveOffsetWithClamping 的期望序按新语义更新\n  （越界沉到队尾、原队尾被顶开）\n- Core 16/16、Avalonia 记忆模式集成 16/16、Infrastructure 存档 5/5 全绿\n\nfeat：循环器出批先练没熟的（移植 qinggenda prioritizeCyclerBatch）\n\n- TrainerMemoryQueue.PrioritizeUnfamiliarBatch：只要还有没熟的单位\n  （counter 低于熟练阈值），下一批优先取它们（按队列序，不足一批再从\n  队首补熟的），整批挪到队首并打乱批内顺序——只按队列顺序拼的话，\n  没熟的字会固定落在批里同一位置（比如剩一个时永远是最后一个）。\n  批已在队首时不再动（幂等，重载/重复出批顺序一致，不为就位批重洗）；\n  全部熟练后不挪，照常按间隔复习；惩罚轮期间队首批必须原样滞留，直接跳过\n- MaterializeMemoryBatch 非惩罚分支出批前先 prioritize，与 qinggenda\n  loadCyclerBatch 的接入点同构（惩罚轮分支不调用）\n- 零进度存档天然不受影响：选中集=队首=文件原序首批，与\n  ZeroProgressSidecarRestoresFileOrder 口径一致\n- 单测×6：捞深处没熟进批+批外保序/全熟不动/已就位不动/幂等不重洗/\n  惩罚轮不动/零进度原序；VM 集成×1：真实保存→篡改存档制造深处没熟→\n  重载断言下一批集合=没熟+队首补足\n- Core 队列 22/22、Avalonia 记忆模式 17/17 全绿\n\nchore：评审打磨——修剪回退分支简化、全空白段降级测试、队列类注释补prioritize\n\n评审轮（cc12ba67..33ec8580）结论 ready-to-merge、无 Critical/Important，\n落实 3 条 Minor 打磨：\n- TrimEdgeBlankLineRuns 找到换行后不必再用 HasEdgeLineBreak 重扫一遍\n  （该区间必含刚找到的换行），改 found 标志直判，纯空格串回退语义更直白\n- 补“整段全空白（空格+换行）”真实管线测试：修剪到空文本走无文章降级，\n  不渲染空行\n- TrainerMemoryQueue 类摘要补“出批先练没熟的”行为，沉入措辞改为\n  “最多沉到队尾”\n\n留档未改：IsEdgeBlank 不含 U+00A0 等 Unicode 空白（中文 txt 场景风险低）；\n循环器若日后加“接下来打什么”预览，需先补 prioritize 后队列补存\n（qinggenda preview==practice 保证）。升级后首个会话快照因段文口径变化\n静默跳过一次恢复属预期设计。\n\nInfrastructure KeepLineBreaks 16/16、Core 872/872 全绿\n\n循环器模式优化",
+      "commit": "7cd89c51e79b8d406cf250e3a1f4fe36c1909fac"
+    },
+    {
       "version": "20261109.1741",
       "published_at": "2026-11-09T09:47:00.575473Z",
       "notes": "feat：练单器里新增循环器模式\n\nfeat：练单器里新增循环器模式",
